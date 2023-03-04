@@ -23,7 +23,7 @@ pipeline {
        steps {
          sh ''' ls
          '''
-           withCredentials([aws(credentialsId: 'aws-credentials', region: 'ca-central-1')]) {
+            withCredentials([aws(credentialsId: 'aws-credentials', region: 'ca-central-1')]) {
            sh 'kubectl version --client --output=yaml'
            sh '''
                  aws eks --region ca-central-1 update-kubeconfig --name boot-demo
