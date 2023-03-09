@@ -74,7 +74,7 @@ spec:
               - all
           privileged: false
           readOnlyRootFilesystem: true
-        image: delalixx/loadgenerator:latest
+        image: delalixx/loadgenerator::v1
         env:
         - name: FRONTEND_ADDR
           value: "frontend:80"
